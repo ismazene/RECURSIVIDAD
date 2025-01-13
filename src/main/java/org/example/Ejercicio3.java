@@ -2,16 +2,17 @@ package org.example;
 
 public class Ejercicio3 {
     public static void ejer3() {
+        int num = Recursividad.pedirNumero();
+        System.out.println(delReves(num));
 
     }
-
-    public static void delReves(int num) {
-        //Asi es como se hace el ejercicio, obviamente en casa tengo que hacer el resto en casa.      
+    public static int delReves(int num) {
         if (num < 10) {
             System.out.println(num);
         } else {
             System.out.println(num % 10);
             delReves(num / 10);
         }
+        return 0;
     }
 }
