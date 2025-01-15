@@ -1,8 +1,8 @@
 package org.example;
 
-public class Ejercicio5 {
+public class Ejercicio4 {
 
-    public static void ejer5() {
+    public static void ejer4() {
         int num = Recursividad.pedirNumero();
 
         boolean esBinario = esBinario(num);

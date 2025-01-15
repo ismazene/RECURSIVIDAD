@@ -18,7 +18,4 @@ public class Ejercicio1 {
         }
         return 1 + digitos(num / 10);
     }
-
-
-
 }

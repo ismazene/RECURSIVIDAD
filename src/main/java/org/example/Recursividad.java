@@ -1,8 +1,8 @@
 package org.example;
-
 import java.util.Scanner;
 
 public class Recursividad {
+    static Scanner teclado = new Scanner(System.in);
 
     public static void imprimirMenu() {
 
@@ -37,14 +37,12 @@ public class Recursividad {
     }
 
     public static String guardarOpcionFinal() {
-        Scanner teclado = new Scanner(System.in);
         String opcionfinal = teclado.next();
         String OpcionFinalMayusculas = opcionfinal.toUpperCase();
         return OpcionFinalMayusculas;
     }
 
     public static int seleccionarEjer() {
-        Scanner teclado = new Scanner(System.in);
         int numCase = teclado.nextInt();
         return numCase;
     }
@@ -67,9 +65,21 @@ public class Recursividad {
                     menuFinal();
                     break;
                 case 4:
-                    Ejercicio3.ejer3();
+                Ejercicio4.ejer4();
+                menuFinal();
+                     break;
+                case 5:
+                    Ejercicio5.ejer5();
                     menuFinal();
                     break;
+                case 6:
+                    Ejercicio6.ejer6();
+                    menuFinal();
+                    break;
+//                case 7:
+//                    menuEjer3();
+//                    menuFinal();
+//                    break;
                 default:
                     System.out.println("Opción no válida");
             }
@@ -77,14 +87,12 @@ public class Recursividad {
     }
 
     public static int pedirNumero() {
-        Scanner teclado = new Scanner(System.in);
         System.out.println("");
         System.out.println("Dame un numero");
         return teclado.nextInt();
     }
 
     public static int pedirNumero2() {
-        Scanner teclado = new Scanner(System.in);
         System.out.println("");
         System.out.println("Dame el segundo numero");
         return teclado.nextInt();
@@ -99,25 +107,25 @@ public class Recursividad {
     }
 
     public static int pedirNumEjer3() {
-        Scanner teclado = new Scanner(System.in);
         int numEjer3 = teclado.nextInt();
         return numEjer3;
     }
 
     public static void seleccionarEjer3() {
 
-            int numEjer3 = pedirNumEjer3();
-            switch (numEjer3) {
-                case 1:
-                    Ejercicio3.ejer3();
-                    menuFinal();
-                    break;
-                case 2:
-                    Ejercicio3_1.ejer3_1();
-                    menuFinal();
-                    break;
-                default:
-                    System.out.println("Opción no válida");
-            }
+        int numEjer3 = pedirNumEjer3();
+        switch (numEjer3) {
+            case 1:
+                Ejercicio3.ejer3();
+                menuFinal();
+                break;
+            case 2:
+                Ejercicio3_1.ejer3_1();
+                menuFinal();
+                break;
+            default:
+                System.out.println("Opción no válida");
         }
     }
+
+}
