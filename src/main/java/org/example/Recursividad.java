@@ -43,13 +43,20 @@ public class Recursividad {
     }
 
     public static int seleccionarEjer() {
-        int numCase = teclado.nextInt();
-        return numCase;
+        try {
+            int numCase = teclado.nextInt();
+            return numCase;
+        } catch (Exception e) {
+            System.err.println("Error. Introduce un número válido.");
+            teclado.nextLine();
+        }
+        return 0;
     }
 
     public static void main(String[] args) {
+        imprimirMenu();
+
         while (true) {
-            imprimirMenu();
             int numCase = seleccionarEjer();
             switch (numCase) {
                 case 1:
@@ -76,26 +83,29 @@ public class Recursividad {
                     Ejercicio6.ejer6();
                     menuFinal();
                     break;
-//                case 7:
-//                    menuEjer3();
-//                    menuFinal();
-//                    break;
+                case 7:
+                    Ejercicio7.ejer7();
+                    menuFinal();
+                    break;
                 default:
                     System.out.println("Opción no válida");
             }
         }
     }
 
-    public static int pedirNumero() {
-        System.out.println("");
-        System.out.println("Dame un numero");
-        return teclado.nextInt();
-    }
-
-    public static int pedirNumero2() {
-        System.out.println("");
-        System.out.println("Dame el segundo numero");
-        return teclado.nextInt();
+    public static int pedirNumero(String mensaje) {
+        while (true) {
+            try {
+                System.out.println("");
+                System.out.println(mensaje);
+                int numero = teclado.nextInt();
+                teclado.nextLine();
+                return numero;
+            } catch (Exception e) {
+                System.err.println("Error. Introduce un número válido.");
+                teclado.nextLine();
+            }
+        }
     }
 
     public static void menuEjer3() {
@@ -106,14 +116,9 @@ public class Recursividad {
         seleccionarEjer3();
     }
 
-    public static int pedirNumEjer3() {
-        int numEjer3 = teclado.nextInt();
-        return numEjer3;
-    }
-
     public static void seleccionarEjer3() {
 
-        int numEjer3 = pedirNumEjer3();
+        int numEjer3 = pedirNumero("Cual es la opcion que prefieres???");
         switch (numEjer3) {
             case 1:
                 Ejercicio3.ejer3();
@@ -126,6 +131,12 @@ public class Recursividad {
             default:
                 System.out.println("Opción no válida");
         }
+    }
+
+    public static String pedirCadena(){
+        System.out.println("Escribe una palabra");
+        String palabra = teclado.next();
+        return palabra;
     }
 
 }

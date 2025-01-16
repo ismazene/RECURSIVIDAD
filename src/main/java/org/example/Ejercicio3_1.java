@@ -5,11 +5,8 @@ public class Ejercicio3_1 {
     static char[]palabra_vector;
 
     public static void ejer3_1(){
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Dime la palabra que quieres que se muestre del reves");
-        String palabra = teclado.next();
-
-         palabra_vector = palabra.toCharArray();
+        String palabra = Recursividad.pedirCadena();
+        palabra_vector = palabra.toCharArray();
 
         del_reves_texto(palabra_vector.length - 1, palabra_vector);
     }

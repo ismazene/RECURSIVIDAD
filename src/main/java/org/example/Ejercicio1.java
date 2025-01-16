@@ -2,13 +2,8 @@ package org.example;
 
 public class Ejercicio1 {
     public static void ejer1() {
-
-        try {
-            int num = Recursividad.pedirNumero();
+            int num = Recursividad.pedirNumero("Dame un numero: ");
             System.out.println(digitos(num));
-        } catch (Exception e) {
-            System.err.println("Error. Introduce una opcion validada");
-        }
     }
     public static int digitos(int num) {
         if (num == 0) {

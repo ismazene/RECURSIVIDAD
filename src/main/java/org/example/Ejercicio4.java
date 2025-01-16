@@ -3,7 +3,7 @@ package org.example;
 public class Ejercicio4 {
 
     public static void ejer4() {
-        int num = Recursividad.pedirNumero();
+        int num = Recursividad.pedirNumero("Dame un numero y te digo si es binario o no: ");
 
         boolean esBinario = esBinario(num);
 

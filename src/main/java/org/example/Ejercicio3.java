@@ -2,7 +2,7 @@ package org.example;
 
 public class Ejercicio3 {
     public static void ejer3() {
-        int num = Recursividad.pedirNumero();
+        int num = Recursividad.pedirNumero("Dame un numero y te lo doy del reves: ");
         System.out.println(delReves(num));
 
     }
